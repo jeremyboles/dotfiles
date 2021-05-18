@@ -1,0 +1,20 @@
+[alias]
+	co = checkout
+	st = status
+[commit]
+	gpgsign = true
+[core]
+	excludesFile = ~/.config/git/ignore
+[init]
+	defaultBranch = main
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	process = git-lfs filter-process
+	required = true
+	smudge = git-lfs smudge -- %f
+[pull]
+	rebase = true
+[user]
+	email = jeremy@centralstandard.com
+	name = Jeremy Boles
+	signingkey = 75EC7ED52AE804B4
